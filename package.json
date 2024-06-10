@@ -1,0 +1,17 @@
+{
+	"name": "chrome-connection-issue-reproduction",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "tsx src/index.ts 3434"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.13",
+		"tsx": "^4.7.0",
+		"typescript": "latest"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.11.2",
+		"hono": "^4.4.4"
+	}
+}

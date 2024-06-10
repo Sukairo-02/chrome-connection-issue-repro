@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>chrome-connection-issue-reproduction</title>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<button id="http" onclick="fetch('http://localhost:3434/').then(console.log).catch(console.error)">HTTP</button>
+		<button id="https" onclick="fetch('https://localhost:3434/').then(console.log).catch(console.error)">
+			HTTPS
+		</button>
+	</body>
+</html>
