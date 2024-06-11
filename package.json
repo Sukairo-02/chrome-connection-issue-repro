@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "tsx src/index.ts 3434"
+		"dev": "tsx src/index.ts 3434 --watch"
 	},
 	"devDependencies": {
 		"@types/node": "^20.12.13",

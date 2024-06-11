@@ -6,9 +6,20 @@
 		<link href="style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<button id="http" onclick="fetch('http://localhost:3434/').then(console.log).catch(console.error)">HTTP</button>
-		<button id="https" onclick="fetch('https://localhost:3434/').then(console.log).catch(console.error)">
-			HTTPS
-		</button>
+		<button id="http" onclick="http()">HTTP</button>
+		<button id="https" onclick="https">HTTPS</button>
 	</body>
+	<script>
+		function http() {
+			fetch('http://localhost:3434/')
+				.then((res) => console.log(res.body))
+				.catch((err) => console.error(err.message))
+		}
+
+		function https() {
+			fetch('https://localhost:3434/')
+				.then((res) => console.log(res.body))
+				.catch((err) => console.error(err.message))
+		}
+	</script>
 </html>
