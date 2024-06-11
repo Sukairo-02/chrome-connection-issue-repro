@@ -18,7 +18,7 @@
 			fetch(`http://localhost:3434/${headers ? 'headers' : ''}`, {
 				headers: headers
 					? {
-							'Access-Control-Allow-Private-Network': true
+							'Access-Control-Allow-Private-Network': 'true'
 					  }
 					: undefined
 			})
@@ -30,7 +30,7 @@
 			fetch(`https://localhost:3434/${headers ? 'headers' : ''}`, {
 				headers: headers
 					? {
-							'Access-Control-Allow-Private-Network': true
+							'Access-Control-Allow-Private-Network': 'true'
 					  }
 					: undefined
 			})
