@@ -13,18 +13,14 @@ app.use(
 	})
 )
 
-app.use('/headers', (c, next) => {
-	c.header('Access-Control-Allow-Private-Network', 'true')
-	c.header('Content-Security-Policy', 'treat-as-public-address')
-
-	return next()
-})
-
 app.get('/', (c) => {
 	return c.text('Connected')
 })
 
 app.get('/headers', (c) => {
+    c.res.headers.set('Access-Control-Allow-Private-Network', 'true')
+	c.res.headers.set('Content-Security-Policy', 'treat-as-public-address')
+
 	return c.text('Connected')
 })
 

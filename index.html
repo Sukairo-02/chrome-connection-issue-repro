@@ -15,25 +15,13 @@
 	</body>
 	<script>
 		function http(headers) {
-			fetch(`http://localhost:3434/${headers ? 'headers' : ''}`, {
-				headers: headers
-					? {
-							'Access-Control-Allow-Private-Network': 'true'
-					  }
-					: undefined
-			})
+			fetch(`http://localhost:3434/${headers ? 'headers' : ''}`)
 				.then((res) => res.text().then(console.log))
 				.catch((err) => console.error(err.message))
 		}
 
 		function https(headers) {
-			fetch(`https://localhost:3434/${headers ? 'headers' : ''}`, {
-				headers: headers
-					? {
-							'Access-Control-Allow-Private-Network': 'true'
-					  }
-					: undefined
-			})
+			fetch(`https://localhost:3434/${headers ? 'headers' : ''}`)
 				.then((res) => res.text().then(console.log))
 				.catch((err) => console.error(err.message))
 		}
