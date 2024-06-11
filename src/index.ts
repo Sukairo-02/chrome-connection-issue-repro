@@ -9,7 +9,6 @@ app.use('*', cors({
 }))
 
 app.get('/', (c) => {
-
     return c.text('Connected')
 })
 
