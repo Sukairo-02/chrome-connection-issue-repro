@@ -12,6 +12,10 @@ app.get('/', (c) => {
     return c.text('Connected')
 })
 
+app.get('/headers', (c) => {
+    return c.text('Connected')
+})
+
 serve({
     port: Number(process.argv[2]),
     fetch: app.fetch
